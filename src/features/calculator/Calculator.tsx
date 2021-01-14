@@ -10,16 +10,19 @@ import {
   addNumber,
   clearCurrentNumber,
   resetCalculator,
+  setOperation,
   useTypedSelector,
+  OperationType,
+  calculateValue,
 } from "./calculatorSlice";
 
 const Calculator = () => {
-  const currentNumber = useTypedSelector((state) => state.currentResult);
+  const { currentResult, operation } = useTypedSelector((state) => state);
   const dispatch = useDispatch();
 
   return (
     <CalculatorContainer>
-      <div id="results">{currentNumber}</div>
+      <div id="results">{currentResult}</div>
       <CalculatorButton onClick={() => dispatch(resetCalculator())}>
         A/C
       </CalculatorButton>
@@ -36,7 +39,11 @@ const Calculator = () => {
       <CalculatorButton onClick={() => dispatch(addNumber(3))}>
         3
       </CalculatorButton>
-      <OperationButton>+</OperationButton>
+      <OperationButton
+        onClick={() => dispatch(setOperation(OperationType.add))}
+      >
+        +
+      </OperationButton>
       <CalculatorButton onClick={() => dispatch(addNumber(4))}>
         4
       </CalculatorButton>
@@ -46,7 +53,11 @@ const Calculator = () => {
       <CalculatorButton onClick={() => dispatch(addNumber(6))}>
         6
       </CalculatorButton>
-      <OperationButton>-</OperationButton>
+      <OperationButton
+        onClick={() => dispatch(setOperation(OperationType.subtract))}
+      >
+        -
+      </OperationButton>
       <CalculatorButton onClick={() => dispatch(addNumber(7))}>
         7
       </CalculatorButton>
@@ -56,12 +67,25 @@ const Calculator = () => {
       <CalculatorButton onClick={() => dispatch(addNumber(9))}>
         9
       </CalculatorButton>
-      <OperationButton>x</OperationButton>
+      <OperationButton
+        onClick={() => dispatch(setOperation(OperationType.multiply))}
+      >
+        x
+      </OperationButton>
       <CalculatorButton onClick={() => dispatch(addNumber(0))}>
         0
       </CalculatorButton>
-      <WideCalculatorButton color="#ca3433">=</WideCalculatorButton>
-      <OperationButton>/</OperationButton>
+      <WideCalculatorButton
+        onClick={() => dispatch(calculateValue())}
+        color="#ca3433"
+      >
+        =
+      </WideCalculatorButton>
+      <OperationButton
+        onClick={() => dispatch(setOperation(OperationType.divide))}
+      >
+        /
+      </OperationButton>
     </CalculatorContainer>
   );
 };

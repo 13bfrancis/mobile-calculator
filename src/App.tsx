@@ -1,8 +1,8 @@
 import React from "react";
-import { Calculator } from "./features/calculator/Calculator";
+import { CalculatorView } from "./features/calculator/CalculatorView";
 
 function App() {
-  return <Calculator />;
+  return <CalculatorView />;
 }
 
 export default App;

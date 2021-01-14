@@ -16,7 +16,7 @@ import {
   calculateValue,
 } from "./calculatorSlice";
 
-const Calculator = () => {
+const CalculatorView = () => {
   const { currentResult } = useTypedSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -90,4 +90,4 @@ const Calculator = () => {
   );
 };
 
-export { Calculator };
+export { CalculatorView };

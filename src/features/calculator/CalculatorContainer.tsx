@@ -5,12 +5,12 @@ export const CalculatorContainer = styled.div`
   width: 100%;
   height: 100%;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: 0.8fr repeat(5, 1fr);
   place-items: center;
 
   #results {
-    font-size: 3rem;
-    padding: 2rem;
+    font-size: 2rem;
+    padding: 1.5rem;
     justify-self: end;
     align-self: center;
     grid-column: 1 / -1;

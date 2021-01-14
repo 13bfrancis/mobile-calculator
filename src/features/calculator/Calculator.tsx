@@ -17,7 +17,7 @@ import {
 } from "./calculatorSlice";
 
 const Calculator = () => {
-  const { currentResult, operation } = useTypedSelector((state) => state);
+  const { currentResult } = useTypedSelector((state) => state);
   const dispatch = useDispatch();
 
   return (

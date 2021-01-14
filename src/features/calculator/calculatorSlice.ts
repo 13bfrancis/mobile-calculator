@@ -48,7 +48,7 @@ const calculatorSlice = createSlice({
       if (state.operation === OperationType.add) {
         state.currentResult += state.previousResult;
       } else if (state.operation === OperationType.subtract) {
-        state.currentResult -= state.previousResult;
+        state.currentResult = state.previousResult - state.currentResult;
       } else if (state.operation === OperationType.multiply) {
         state.currentResult *= state.previousResult;
       } else if (state.operation === OperationType.divide) {

@@ -29,7 +29,7 @@ const CalculatorView = () => {
       <CalculatorButton onClick={() => dispatch(clearCurrentNumber())}>
         Clear
       </CalculatorButton>
-      <WideCalculatorButton>History</WideCalculatorButton>
+      <WideCalculatorButton>HIST</WideCalculatorButton>
       <CalculatorButton onClick={() => dispatch(addNumber(1))}>
         1
       </CalculatorButton>

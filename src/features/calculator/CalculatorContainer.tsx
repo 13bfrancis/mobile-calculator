@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const CalculatorContainer = styled.div`
   display: grid;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 0.8fr repeat(5, 1fr);
+  grid-template-rows: 1fr repeat(5, 2fr);
   place-items: center;
 
   #results {

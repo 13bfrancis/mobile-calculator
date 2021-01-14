@@ -27,7 +27,7 @@ const CalculatorView = () => {
         A/C
       </CalculatorButton>
       <CalculatorButton onClick={() => dispatch(clearCurrentNumber())}>
-        Clear
+        C/E
       </CalculatorButton>
       <WideCalculatorButton>HIST</WideCalculatorButton>
       <CalculatorButton onClick={() => dispatch(addNumber(1))}>
